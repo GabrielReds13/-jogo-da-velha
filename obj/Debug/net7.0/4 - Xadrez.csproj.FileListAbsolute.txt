@@ -1,0 +1,15 @@
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\bin\Debug\net7.0\4 - Xadrez.exe
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\bin\Debug\net7.0\4 - Xadrez.deps.json
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\bin\Debug\net7.0\4 - Xadrez.runtimeconfig.json
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\bin\Debug\net7.0\4 - Xadrez.dll
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\bin\Debug\net7.0\4 - Xadrez.pdb
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\4 - Xadrez.csproj.AssemblyReference.cache
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\4 - Xadrez.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\4 - Xadrez.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\4 - Xadrez.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\4 - Xadrez.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\4 - Xadrez.dll
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\refint\4 - Xadrez.dll
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\4 - Xadrez.pdb
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\4 - Xadrez.genruntimeconfig.cache
+C:\Users\gabri\OneDrive\Documentos\IFRO\Matérias\PO2\Lista Avaliativa - 1°Bimestre\4 - Xadrez\obj\Debug\net7.0\ref\4 - Xadrez.dll
