@@ -9,7 +9,7 @@ public class Program
         JogoDaVelha n = new JogoDaVelha();
 
         // Codigo
-        while(false) {
+        while(true) {
           Console.Clear();
 
           // Movimentacao
@@ -43,14 +43,12 @@ public class Program
 
           // Mostrar cordenadas
           n.Cordenadas();
+          n.VerificarVitoria();
 
           // Movimentacao
           tecla = Console.ReadKey();
           n.Controle(tecla);
           n.EscolherCasa(tecla);
         }
-
-
-
     }
 }

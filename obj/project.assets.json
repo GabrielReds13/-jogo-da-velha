@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - Xadrez\\4 - Xadrez.csproj",
-      "projectName": "4 - Xadrez",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - Xadrez\\4 - Xadrez.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - Xadrez\\4 - JogoDaVelha.csproj",
+      "projectName": "4 - JogoDaVelha",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - Xadrez\\4 - JogoDaVelha.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - Xadrez\\obj\\",
       "projectStyle": "PackageReference",

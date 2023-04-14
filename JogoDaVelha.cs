@@ -7,7 +7,9 @@ public class JogoDaVelha
     private int posicaoY;
 
     private string[,] tabuleiroCasas = new string[3, 3];
+    
     private bool turno;
+    private string vencedor = "";
 
     // Metodos
 
@@ -87,6 +89,5 @@ public class JogoDaVelha
 
     // Verificar vitoria 
     public void VerificarVitoria() {
-        
     }
 }
