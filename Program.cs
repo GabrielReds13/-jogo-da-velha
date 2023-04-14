@@ -6,10 +6,13 @@ public class Program
     {
         // Variaveis
         ConsoleKeyInfo tecla, iniciarJogo;
+        bool partida = false;
+
         JogoDaVelha n = new JogoDaVelha();
+        string[] ocupacao = n.GetOcupacao();
 
         // Codigo
-        while(true) {
+        while(partida == false) {
           Console.Clear();
 
           // Movimentacao
@@ -25,7 +28,7 @@ public class Program
           iniciarJogo = Console.ReadKey();
 
           if($"{iniciarJogo.Key}" == "Spacebar") {
-            break;
+            partida = true;
           } else {
             Console.Clear();
             Console.WriteLine(" ! ERROR: TECLA INVÁLIDA PARA INICIAR JOGO !");
@@ -34,16 +37,30 @@ public class Program
         }
 
         // Jogo
-        while(true) {
+        while(partida == true) {
           Console.Clear();
 
           // Grade e turno
           Console.WriteLine($"* VEZ DE: {n.TrocarTurno()}\n");
-          n.grade();
+          n.Grade();
 
           // Mostrar cordenadas
           n.Cordenadas();
+          
+          // Verificar vitoria
           n.VerificarVitoria();
+          if(n.VerificarVitoria() == ocupacao[1] || n.VerificarVitoria() == ocupacao[2]) {
+            partida = false;
+            Console.WriteLine($"VENCEDOR: {n.VerificarVitoria()}");
+            Console.ReadKey();
+
+            // Finalizar partida
+            Console.Clear();
+            Console.WriteLine("\n- PRESSIONE QUALQUER TECLA PARA SAIR -");
+            Console.WriteLine("        - OBRIGADO POR JOGAR - ");
+            Console.ReadKey();
+            break;
+          }
 
           // Movimentacao
           tecla = Console.ReadKey();

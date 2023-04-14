@@ -1,27 +1,31 @@
 public class JogoDaVelha
 {
     // Atributos
-    private string[] ocupacao = {"", "X", "O"};
+    private string[] ocupacao = {" ", "X", "O"};
 
     private int posicaoX;
     private int posicaoY;
 
-    private string[,] tabuleiroCasas = new string[3, 3];
+    private string[,] tabuleiroCasas;
     
     private bool turno;
     private string vencedor = "";
 
+    // Metodo construtor
+    public JogoDaVelha() {
+        this.tabuleiroCasas = new string[3, 3];
+    }
+
     // Metodos
 
     // Mostrar grade
-    public void grade() {
+    public void Grade() {
         // Imprimir grade
         Console.WriteLine($"   1   2   3\n1  {tabuleiroCasas[0, 0]} | {tabuleiroCasas[0, 1]} | {tabuleiroCasas[0, 2]}\n  -----------\n2  {tabuleiroCasas[1, 0]} | {tabuleiroCasas[1, 1]} | {tabuleiroCasas[1, 2]}\n  -----------\n3  {tabuleiroCasas[2, 0]} | {tabuleiroCasas[2, 1]} | {tabuleiroCasas[2, 2]}");
     }
 
     // Trocar turno
     public string TrocarTurno() {
-        // Variaveis
         if(this.turno == false) {
             return $"JOGADOR {this.ocupacao[1]}";
         } else {
@@ -74,12 +78,17 @@ public class JogoDaVelha
             if(this.turno == false) {
                 // Jogador x
                 tabuleiroCasas[this.posicaoY, this.posicaoX] = ocupacao[1];
-                this.turno = true;
             } else {
                 // Jogador o
                 tabuleiroCasas[this.posicaoY, this.posicaoX] = ocupacao[2];
-                this.turno = false;
+                
             }
+
+            // Trocar Turno
+            if(this.vencedor != ocupacao[1] || this.vencedor != ocupacao[2]) {
+                if(this.turno == false) { this.turno = true; }
+                else { this.turno = false; }
+            } else { }
 
             // Resetar posicao
             this.posicaoX = 0;
@@ -88,6 +97,42 @@ public class JogoDaVelha
     }
 
     // Verificar vitoria 
-    public void VerificarVitoria() {
+    public string VerificarVitoria() {
+        //Jogador X
+        if( // Diagonal
+            tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
+            || tabuleiroCasas[2, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[0, 2] == ocupacao[1]
+            // Vertical
+            || tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[0, 1] == ocupacao[1] && tabuleiroCasas[0, 2] == ocupacao[1]
+            || tabuleiroCasas[1, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[1, 2] == ocupacao[1]
+            || tabuleiroCasas[2, 0] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
+            // Horizontal
+            || tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[1, 0] == ocupacao[1] && tabuleiroCasas[2, 0] == ocupacao[1]
+            || tabuleiroCasas[0, 1] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1]
+            || tabuleiroCasas[2, 2] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
+        ) { vencedor = ocupacao[1]; }
+        //Jogador O
+        else if ( // Diagonal
+            tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
+            || tabuleiroCasas[2, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[0, 2] == ocupacao[2]
+            // Vertical
+            || tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[0, 1] == ocupacao[2] && tabuleiroCasas[0, 2] == ocupacao[2]
+            || tabuleiroCasas[1, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[1, 2] == ocupacao[2]
+            || tabuleiroCasas[2, 0] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
+            // Horizontal
+            || tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[1, 0] == ocupacao[2] && tabuleiroCasas[2, 0] == ocupacao[2]
+            || tabuleiroCasas[0, 1] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2]
+            || tabuleiroCasas[2, 2] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
+        ) { vencedor = ocupacao[2]; }
+        // Velha
+        else { vencedor = "EMPATE"; }
+
+        // Return
+        return this.vencedor;
+    }
+
+    // Gets
+    public string[] GetOcupacao() {
+        return this.ocupacao;
     }
 }
