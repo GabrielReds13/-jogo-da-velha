@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - Xadrez\\4 - JogoDaVelha.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - JogoDaVelha\\4 - JogoDaVelha.csproj",
       "projectName": "4 - JogoDaVelha",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - Xadrez\\4 - JogoDaVelha.csproj",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - JogoDaVelha\\4 - JogoDaVelha.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - Xadrez\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\IFRO\\Matérias\\PO2\\Lista Avaliativa - 1°Bimestre\\4 - JogoDaVelha\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",

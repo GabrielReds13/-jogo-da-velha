@@ -43,8 +43,8 @@ public class JogoDaVelha
     // Mostrar Cordenadas
     public void Cordenadas()
     {
-        Console.WriteLine($"\nLINHA: {this.posicaoX + 1}");
-        Console.WriteLine($"COLUNA: {this.posicaoY + 1}\n");
+        Console.WriteLine($"\nLINHA: {this.posicaoY + 1}");
+        Console.WriteLine($"COLUNA: {this.posicaoX + 1}\n");
     }
 
     // Controles
@@ -122,37 +122,34 @@ public class JogoDaVelha
     // Verificar vitoria 
     public string VerificarVitoria()
     {
-        if(tabuleiroPreenchido == tabuleiroCasas.Length)
-        {
-            //Jogador X
-            if ( // Diagonal
-                tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
-                || tabuleiroCasas[2, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[0, 2] == ocupacao[1]
-                // Vertical
-                || tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[0, 1] == ocupacao[1] && tabuleiroCasas[0, 2] == ocupacao[1]
-                || tabuleiroCasas[1, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[1, 2] == ocupacao[1]
-                || tabuleiroCasas[2, 0] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
-                // Horizontal
-                || tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[1, 0] == ocupacao[1] && tabuleiroCasas[2, 0] == ocupacao[1]
-                || tabuleiroCasas[0, 1] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1]
-                || tabuleiroCasas[2, 2] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
-            ) { vencedor = ocupacao[1]; }
-            //Jogador O
-            else if ( // Diagonal
-                tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
-                || tabuleiroCasas[2, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[0, 2] == ocupacao[2]
-                // Vertical
-                || tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[0, 1] == ocupacao[2] && tabuleiroCasas[0, 2] == ocupacao[2]
-                || tabuleiroCasas[1, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[1, 2] == ocupacao[2]
-                || tabuleiroCasas[2, 0] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
-                // Horizontal
-                || tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[1, 0] == ocupacao[2] && tabuleiroCasas[2, 0] == ocupacao[2]
-                || tabuleiroCasas[0, 1] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2]
-                || tabuleiroCasas[2, 2] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
-            ) { vencedor = ocupacao[2]; }
-            // Velha
-            else { vencedor = "EMPATE"; }
-        }
+        //Jogador X
+        if ( // Diagonal
+            tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
+            || tabuleiroCasas[2, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[0, 2] == ocupacao[1]
+            // Vertical
+            || tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[0, 1] == ocupacao[1] && tabuleiroCasas[0, 2] == ocupacao[1]
+            || tabuleiroCasas[1, 0] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[1, 2] == ocupacao[1]
+            || tabuleiroCasas[2, 0] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
+            // Horizontal
+            || tabuleiroCasas[0, 0] == ocupacao[1] && tabuleiroCasas[1, 0] == ocupacao[1] && tabuleiroCasas[2, 0] == ocupacao[1]
+            || tabuleiroCasas[0, 1] == ocupacao[1] && tabuleiroCasas[1, 1] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1]
+            || tabuleiroCasas[2, 2] == ocupacao[1] && tabuleiroCasas[2, 1] == ocupacao[1] && tabuleiroCasas[2, 2] == ocupacao[1]
+        ) { vencedor = ocupacao[1]; }
+        //Jogador O
+        else if ( // Diagonal
+            tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
+            || tabuleiroCasas[2, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[0, 2] == ocupacao[2]
+            // Vertical
+            || tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[0, 1] == ocupacao[2] && tabuleiroCasas[0, 2] == ocupacao[2]
+            || tabuleiroCasas[1, 0] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[1, 2] == ocupacao[2]
+            || tabuleiroCasas[2, 0] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
+            // Horizontal
+            || tabuleiroCasas[0, 0] == ocupacao[2] && tabuleiroCasas[1, 0] == ocupacao[2] && tabuleiroCasas[2, 0] == ocupacao[2]
+            || tabuleiroCasas[0, 1] == ocupacao[2] && tabuleiroCasas[1, 1] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2]
+            || tabuleiroCasas[2, 2] == ocupacao[2] && tabuleiroCasas[2, 1] == ocupacao[2] && tabuleiroCasas[2, 2] == ocupacao[2]
+        ) { vencedor = ocupacao[2]; }
+        // Velha
+        else if(tabuleiroPreenchido == tabuleiroCasas.Length) { vencedor = "EMPATE"; }
 
         // Return
         return this.vencedor;
@@ -162,5 +159,8 @@ public class JogoDaVelha
     public string[] GetOcupacao()
     {
         return this.ocupacao;
+    }
+    public string GetVencedor() {
+        return this.vencedor;
     }
 }

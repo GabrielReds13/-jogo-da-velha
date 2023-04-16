@@ -7,9 +7,7 @@ public class Program
         // Variaveis
         ConsoleKeyInfo tecla, iniciarJogo;
         bool partida = false;
-
-        JogoDaVelha n = new JogoDaVelha();
-        string[] ocupacao = n.GetOcupacao();
+        bool jogo = false;
 
         // Codigo
         while (partida == false)
@@ -31,6 +29,7 @@ public class Program
             if ($"{iniciarJogo.Key}" == "Spacebar")
             {
                 partida = true;
+                jogo = true;
             }
             else
             {
@@ -41,48 +40,73 @@ public class Program
         }
 
         // Jogo
-        while (partida == true)
-        {
-            Console.Clear();
+        while(jogo == true) {
+            // Objeto
+            JogoDaVelha n = new JogoDaVelha();
+            string[] ocupacao = n.GetOcupacao();
 
-            // Grade e turno
-            Console.WriteLine($"* VEZ DE: {n.TrocarTurno()}\n");
-            n.Grade();
-
-            // Mostrar cordenadas
-            n.Cordenadas();
-
-            // Verificar vitoria
-            n.VerificarVitoria();
-            if (n.VerificarVitoria() == ocupacao[1] || n.VerificarVitoria() == ocupacao[2])
-            {
-                // Imprimir vencedor
-                partida = false;
-                Console.WriteLine($"VENCEDOR: {n.VerificarVitoria()}");
-                Console.ReadKey();
-            } 
-            // Empate
-            else if(n.VerificarVitoria() == "EMPATE")
-            {
-                partida = false;
-                Console.WriteLine($"VENCEDOR: {n.VerificarVitoria()}");
-                Console.ReadKey();
-            }
-
-            // Finalizar partida
-            if(partida != true)
+            // Partida
+            while (partida == true)
             {
                 Console.Clear();
-                Console.WriteLine("\n- PRESSIONE QUALQUER TECLA PARA SAIR -");
-                Console.WriteLine("        - OBRIGADO POR JOGAR - ");
-                Console.ReadKey();
-                break;
+
+                // Grade e turno
+                Console.WriteLine($"* VEZ DE: {n.TrocarTurno()}\n");
+                n.Grade();
+
+                // Encerrar partida
+                if (n.GetVencedor() == ocupacao[1] || n.GetVencedor() == ocupacao[2])
+                {
+                    // Variaveis
+                    partida = !true;
+                    jogo = !true;
+
+                    // Imprimir vencedor
+                    Console.WriteLine($"\nVENCEDOR: {n.GetVencedor()}\n");
+                    break;
+                } 
+                // Empate
+                else if(n.GetVencedor() == "EMPATE")
+                {
+                    // Variaveis
+                    partida = !true;
+                    jogo = !true;
+
+                    // Imprimir Vencedor
+                    Console.WriteLine($"\nVENCEDOR: {n.GetVencedor()}\n");
+                    break;
+                } else { }
+
+                // Mostrar cordenadas
+                n.Cordenadas();
+
+                // Movimentacao
+                tecla = Console.ReadKey();
+                n.Controle(tecla);
+                n.EscolherCasa(tecla);
+
+                // Verificar Vitoria
+                n.VerificarVitoria();
             }
 
-            // Movimentacao
-            tecla = Console.ReadKey();
-            n.Controle(tecla);
-            n.EscolherCasa(tecla);
+            // Reiniciar partida
+            if(partida != true) {
+                Console.WriteLine("- PRESSIONE [ espaço ] PARA RECOMEÇAR PARTIDA");
+                Console.WriteLine("- PRESSIONE QUALQUER TECLA PARA SAIR");
+                iniciarJogo = Console.ReadKey();
+
+                // Sair do programa
+                if ($"{iniciarJogo.Key}" == "Spacebar") {
+                    partida = true;
+                    jogo = true;
+                } else { break; }
+            }
         }
+
+        // Fechar programa
+        Console.Clear();
+        Console.WriteLine("\n- PRESSIONE QUALQUER TECLA PARA SAIR -");
+        Console.WriteLine("       - OBRIGADO POR JOGAR - ");
+        Console.ReadKey();
     }
 }
